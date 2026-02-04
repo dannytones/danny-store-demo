@@ -17,14 +17,13 @@ const product: ProductType = {
     purple: "/products/1p.png",
     green: "/products/1gr.png",
   },
+  categorySlug: "t-shirt",
 };
 export const generateMetadata = async ({
   params,
 }: {
   params: { id: string };
 }) => {
-  // TEMPORARY
-  // TODO
   return {
     title: product.name,
     description: product.description,

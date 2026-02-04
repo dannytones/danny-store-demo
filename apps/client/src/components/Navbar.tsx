@@ -21,12 +21,20 @@ const Navbar = () => {
           Danny Store.
         </p>
       </Link>
-      <div className="">
-        <h3>DEMO VERSION</h3>
-        <p>
-          full version click <span> </span>
-          <a href="https://github.com/dannytones/DannyStore-Ecommerce">
-            github
+      <div className="flex items-center gap-2 bg-neutral-100 border border-neutral-200 px-4 py-1 rounded-full whitespace-nowrap">
+        <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-400 border-r border-neutral-300 pr-2">
+          Demo
+        </span>
+        <p className="text-[11px] text-neutral-600 font-medium">
+          Full version on{" "}
+          <a
+            href="https://github.com/dannytones/DannyStore-Ecommerce"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold underline underline-offset-4"
+            style={{ color: "#2563eb", textDecorationColor: "#bfdbfe" }}
+          >
+            GitHub
           </a>
         </p>
       </div>

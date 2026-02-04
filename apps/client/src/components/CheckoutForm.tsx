@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { PaymentElement, useCheckout } from "@stripe/react-stripe-js/checkout";
 import { ShippingFormInputs } from "@repo/types";
-import { ConfirmError } from "@stripe/stripe-js";
 
 const CheckoutForm = ({
   shippingForm,
@@ -12,7 +11,6 @@ const CheckoutForm = ({
   const checkoutState = useCheckout();
 
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<ConfirmError | null>(null);
 
   const handleClick = async () => {
     setLoading(true);
@@ -31,7 +29,6 @@ const CheckoutForm = ({
       const res = await confirm();
       if (res.type === "error") {
         console.error(res.error.message);
-        setError(res.error);
         setLoading(false);
       } else {
         console.log("Payment was Succesfull!", res.session);

@@ -127,8 +127,8 @@ const products: ProductsType = [
 ];
 interface ProductListProps {
   category: string;
-  sort?: string; // Додаємо цей рядок
-  search?: string; // Додаємо цей рядок
+  sort?: string;
+  search?: string;
   params: "homepage" | "products";
 }
 
@@ -191,7 +191,16 @@ const ProductList = async ({
       {displayedProducts.length === 0 ? (
         <div className="text-center py-20 text-gray-400">Nothing found.</div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+        <div
+          className="grid w-full gap-8"
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              displayedProducts.length > 0
+                ? "repeat(3, minmax(0, 1fr))"
+                : "1fr",
+          }}
+        >
           {displayedProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
