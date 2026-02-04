@@ -20,8 +20,5 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ],
-  "dependencies": {
-    "next": "^16.1.4"
-  }
+  ]
 }
