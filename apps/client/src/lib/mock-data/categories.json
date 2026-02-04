@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Jackets",
+    "slug": "jackets"
+  },
+  {
+    "id": 2,
+    "name": "Hoodies",
+    "slug": "hoodies"
+  },
+  {
+    "id": 3,
+    "name": "T-Shirts",
+    "slug": "t-shirts"
+  },
+  {
+    "id": 4,
+    "name": "Pants",
+    "slug": "pants"
+  },
+  {
+    "id": 5,
+    "name": "Shoes",
+    "slug": "shoes"
+  }
+]

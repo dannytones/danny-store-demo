@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Denim Jacket",
+    "shortDescription": "Timeless denim jacket with a modern fit",
+    "description": "Our classic denim jacket combines traditional craftsmanship with contemporary style. Made from premium denim fabric, this versatile piece features a comfortable regular fit, metal button closures, and functional chest pockets. Perfect for layering in any season.",
+    "price": 8999,
+    "sizes": ["s", "m", "l", "xl", "xxl"],
+    "colors": ["blue", "gray"],
+    "images": {
+      "blue": "/products/1g.png",
+      "gray": "/products/1gr.png"
+    },
+    "createdAt": "2026-01-15T10:30:00.000Z",
+    "updatedAt": "2026-01-15T10:30:00.000Z",
+    "categorySlug": "jackets"
+  },
+  {
+    "id": 2,
+    "name": "Urban Bomber Jacket",
+    "shortDescription": "Sleek bomber jacket for the modern urbanite",
+    "description": "Step up your style game with our urban bomber jacket. Featuring a lightweight yet durable construction, ribbed cuffs and hem, and a smooth zipper closure. The perfect blend of comfort and street style for everyday wear.",
+    "price": 12499,
+    "sizes": ["s", "m", "l", "xl"],
+    "colors": ["green", "gray"],
+    "images": {
+      "green": "/products/2g.png",
+      "gray": "/products/2gr.png"
+    },
+    "createdAt": "2026-01-14T14:20:00.000Z",
+    "updatedAt": "2026-01-14T14:20:00.000Z",
+    "categorySlug": "jackets"
+  },
+  {
+    "id": 3,
+    "name": "Premium Leather Jacket",
+    "shortDescription": "Luxurious genuine leather jacket",
+    "description": "Crafted from genuine leather, this premium jacket offers unmatched quality and style. Features include asymmetric zipper closure, multiple pockets, and a sleek silhouette. An investment piece that gets better with age.",
+    "price": 24999,
+    "sizes": ["s", "m", "l", "xl", "xxl"],
+    "colors": ["black", "blue", "gray"],
+    "images": {
+      "black": "/products/3b.png",
+      "blue": "/products/3bl.png",
+      "gray": "/products/3gr.png"
+    },
+    "createdAt": "2026-01-13T09:15:00.000Z",
+    "updatedAt": "2026-01-13T09:15:00.000Z",
+    "categorySlug": "jackets"
+  },
+  {
+    "id": 4,
+    "name": "Sporty Hoodie",
+    "shortDescription": "Comfortable athletic hoodie for active lifestyle",
+    "description": "Stay comfortable during workouts or casual outings with our sporty hoodie. Made from moisture-wicking fabric with a soft fleece interior. Features include an adjustable drawstring hood, kangaroo pocket, and ribbed cuffs.",
+    "price": 5999,
+    "sizes": ["s", "m", "l", "xl", "xxl"],
+    "colors": ["purple", "white"],
+    "images": {
+      "purple": "/products/4p.png",
+      "white": "/products/4w.png"
+    },
+    "createdAt": "2026-01-12T16:45:00.000Z",
+    "updatedAt": "2026-01-12T16:45:00.000Z",
+    "categorySlug": "hoodies"
+  },
+  {
+    "id": 5,
+    "name": "Essential Crew Neck Hoodie",
+    "shortDescription": "Basic hoodie for everyday comfort",
+    "description": "The perfect everyday hoodie made from premium cotton blend. Simple, comfortable, and versatile. Features a classic crew neck design, soft interior lining, and a relaxed fit that works for any casual occasion.",
+    "price": 4999,
+    "sizes": ["xs", "s", "m", "l", "xl"],
+    "colors": ["blue", "orange", "red"],
+    "images": {
+      "blue": "/products/5bl.png",
+      "orange": "/products/5o.png",
+      "red": "/products/5r.png"
+    },
+    "createdAt": "2026-01-11T11:30:00.000Z",
+    "updatedAt": "2026-01-11T11:30:00.000Z",
+    "categorySlug": "hoodies"
+  },
+  {
+    "id": 6,
+    "name": "Zip-Up Track Hoodie",
+    "shortDescription": "Athletic zip hoodie with modern design",
+    "description": "Designed for athletes and style enthusiasts alike. This zip-up hoodie features moisture-wicking technology, full-length zipper, side pockets, and a contemporary fit. Perfect for pre-workout warm-ups or casual wear.",
+    "price": 6999,
+    "sizes": ["s", "m", "l", "xl"],
+    "colors": ["green", "white"],
+    "images": {
+      "green": "/products/6g.png",
+      "white": "/products/6w.png"
+    },
+    "createdAt": "2026-01-10T13:20:00.000Z",
+    "updatedAt": "2026-01-10T13:20:00.000Z",
+    "categorySlug": "hoodies"
+  },
+  {
+    "id": 7,
+    "name": "Classic Fit T-Shirt",
+    "shortDescription": "Essential cotton tee for everyday wear",
+    "description": "A wardrobe staple made from 100% premium cotton. This classic fit t-shirt offers superior comfort and durability. Features include reinforced seams, tagless design for comfort, and a timeless crew neck cut.",
+    "price": 2999,
+    "sizes": ["xs", "s", "m", "l", "xl", "xxl"],
+    "colors": ["green", "purple"],
+    "images": {
+      "green": "/products/7g.png",
+      "purple": "/products/7p.png"
+    },
+    "createdAt": "2026-01-09T10:00:00.000Z",
+    "updatedAt": "2026-01-09T10:00:00.000Z",
+    "categorySlug": "t-shirts"
+  },
+  {
+    "id": 8,
+    "name": "Premium V-Neck Tee",
+    "shortDescription": "Refined v-neck t-shirt in soft cotton",
+    "description": "Elevate your basics with our premium v-neck tee. Crafted from soft, breathable cotton with a flattering v-neck design. Perfect for layering or wearing on its own. Designed to maintain its shape wash after wash.",
+    "price": 3499,
+    "sizes": ["s", "m", "l", "xl"],
+    "colors": ["black", "gray"],
+    "images": {
+      "black": "/products/8b.png",
+      "gray": "/products/8gr.png"
+    },
+    "createdAt": "2026-01-08T15:30:00.000Z",
+    "updatedAt": "2026-01-08T15:30:00.000Z",
+    "categorySlug": "t-shirts"
+  }
+]
