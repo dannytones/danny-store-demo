@@ -1,5 +1,4 @@
 import { CartStoreActionsType, CartStoreStateType } from "@/components/types";
-import { deflate } from "zlib";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
@@ -8,21 +7,28 @@ const useCartStore = create<CartStoreStateType & CartStoreActionsType>()(
     (set) => ({
       cart: [],
       hasHydrated: false,
+
       addToCart: (product) =>
         set((state) => {
+          // Шукаємо, чи є вже такий товар з таким самим кольором та розміром
           const existingIndex = state.cart.findIndex(
             (p) =>
               p.id === product.id &&
               p.selectedSize === product.selectedSize &&
-              p.selectedColor === product.selectedColor
+              p.selectedColor === product.selectedColor,
           );
+
           if (existingIndex !== -1) {
+            // Якщо товар є — оновлюємо кількість
             const updatedCart = [...state.cart];
-            updatedCart[existingIndex] = {
-              ...updatedCart[existingIndex],
-              quantity:
-                updatedCart[existingIndex].quantity + (product.quantity || 1),
-            };
+            const existingItem = updatedCart[existingIndex];
+
+            if (existingItem) {
+              updatedCart[existingIndex] = {
+                ...existingItem,
+                quantity: existingItem.quantity + (product.quantity || 1),
+              };
+            }
             return { cart: updatedCart };
           }
           return {
@@ -31,12 +37,11 @@ const useCartStore = create<CartStoreStateType & CartStoreActionsType>()(
               {
                 ...product,
                 quantity: product.quantity || 1,
-                selectedSize: product.selectedSize,
-                selectedColor: product.selectedColor,
-              },
+              } as any,
             ],
           };
         }),
+
       removeFromCart: (product) =>
         set((state) => ({
           cart: state.cart.filter(
@@ -45,9 +50,10 @@ const useCartStore = create<CartStoreStateType & CartStoreActionsType>()(
                 p.id === product.id &&
                 p.selectedSize === product.selectedSize &&
                 p.selectedColor === product.selectedColor
-              )
+              ),
           ),
         })),
+
       clearCart: () => set({ cart: [] }),
     }),
     {
@@ -58,7 +64,8 @@ const useCartStore = create<CartStoreStateType & CartStoreActionsType>()(
           state.hasHydrated = true;
         }
       },
-    }
-  )
+    },
+  ),
 );
+
 export default useCartStore;

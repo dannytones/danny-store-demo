@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import SearchBar from "./SearchBar";
@@ -40,7 +40,13 @@ const Navbar = () => {
       </div>
       {/* Right */}
       <div className="flex items-center gap-6">
-        <SearchBar />
+        <Suspense
+          fallback={
+            <div className="hidden sm:block w-32 h-8 bg-gray-100 animate-pulse rounded-md" />
+          }
+        >
+          <SearchBar />
+        </Suspense>
         <Link href="/">
           <Home className="w-4 h-4 text-gray-600" />
         </Link>

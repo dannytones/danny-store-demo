@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from ".././components/Footer";
 import Navbar from ".././components/Navbar";
 import { ToastContainer } from "react-toastify";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,9 @@ export default function RootLayout({
       >
         <div className="mx-auto p-4 sm:px-0 sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-6xl">
           <Navbar />
-          {children}
+          <Suspense fallback={<div>Loading...</div>}>
+            <main className="py-8">{children}</main>
+          </Suspense>
           <Footer />
         </div>
         <ToastContainer position="bottom-right" />
